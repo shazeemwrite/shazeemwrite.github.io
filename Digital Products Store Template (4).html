@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaaz Digital - Premium Digital Assets, Journals & Printables</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Inter & Lucide Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-cursive { font-family: 'Great Vibes', cursive; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <div class="bg-gradient-to-r from-brand-600 via-indigo-600 to-rose-600 text-white text-xs py-2 px-4 text-center font-medium shadow-inner flex items-center justify-center space-x-2">
+        <span>✨ <strong>Shaaz Digital:</strong> E-books, Journals, Posters & Holiday Cards</span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3 group cursor-pointer" onclick="showToast('Shaaz Digital: Premium Digital Assets')">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-rose-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/30 transition-transform group-hover:scale-105">
+                        <span class="text-3xl font-cursive text-white drop-shadow">S</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex items-center space-x-1.5">
+                            <span class="text-2xl font-bold tracking-wide text-slate-900 font-cursive">Shaaz</span>
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded-full bg-brand-100 text-brand-700">Digital</span>
+                        </div>
+                        <span class="text-[9px] text-slate-500 font-semibold tracking-wider">Printables & E-books</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#home" class="hover:text-brand-600 transition-colors">Home</a>
+                    <a href="#products" class="hover:text-brand-600 transition-colors">Catalog</a>
+                    <button onclick="toggleAboutModal()" class="hover:text-brand-600 transition-colors bg-transparent border-none cursor-pointer font-medium text-sm">About Us</button>
+                    <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Actions: Cart & CTA -->
+                <div class="flex items-center space-x-4">
+                    <button onclick="toggleCart()" class="relative p-2.5 rounded-xl text-slate-600 hover:text-brand-600 hover:bg-brand-50 transition-all">
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                        <span id="cart-badge" class="absolute -top-1 -right-1 w-5 h-5 bg-brand-600 text-white text-xs font-bold rounded-full flex items-center justify-center shadow">0</span>
+                    </button>
+                    <a href="#products" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-brand-600 text-white font-semibold text-sm shadow-lg shadow-brand-600/25 hover:bg-brand-700 transition-all">
+                        Explore Collection
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 bg-gradient-to-b from-white via-brand-50/30 to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wider mb-6">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                        <span>E-books, Journals, Posters & Holiday Cards</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
+                        Exquisite digital treasures for <span class="bg-gradient-to-r from-brand-600 via-indigo-600 to-rose-600 bg-clip-text text-transparent">every celebration</span>.
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Instantly downloadable e-books, mindfulness journals, wall art posters, and festive greeting & Christmas cards crafted to inspire.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#products" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-600 text-white font-semibold text-base shadow-xl shadow-brand-600/30 hover:bg-brand-700 transition-all text-center">
+                            Browse Products
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold text-base hover:bg-slate-50 transition-all text-center flex items-center justify-center space-x-2">
+                            <span>Contact Us</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Mockup Area (URL removed from mockup) -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-rose-500 opacity-25 blur-2xl"></div>
+                        <div class="relative rounded-3xl bg-white border border-slate-200/80 shadow-2xl p-6 overflow-hidden">
+                            <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-rose-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="p-4 rounded-2xl bg-brand-50 border border-brand-100 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold">01</div>
+                                        <div>
+                                            <h4 class="text-sm font-bold text-slate-900">Wellness & Gratitude Journal</h4>
+                                            <p class="text-xs text-slate-500">3 Styles Available</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold">02</div>
+                                        <div>
+                                            <h4 class="text-sm font-bold text-slate-900">Daily Diary Notebook</h4>
+                                            <p class="text-xs text-slate-500">3 Styles Available</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold">03</div>
+                                        <div>
+                                            <h4 class="text-sm font-bold text-slate-900">Blank Recipe Writing Card</h4>
+                                            <p class="text-xs text-slate-500">3 Styles Available</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journals" class="py-20 lg:py-28 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">Notebooks & Journals</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Daily Writing, Diaries & Recipe Cards in Multiple Styles</h3>
+                <p class="mt-4 text-lg text-slate-600">Choose your favorite aesthetic style for each digital notebook and journal template.</p>
+            </div>
+
+            <!-- Notebooks & Journals Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1: Wellness & Gratitude Journal -->
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="relative h-56 bg-gradient-to-br from-indigo-500 to-brand-700 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <i data-lucide="book-open" class="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-slate-900">Journal</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="text-xl font-bold text-slate-900">Botanical Daily Wellness & Gratitude Journal</h4>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-4">A 365-day mindfulness journal featuring floral motifs, habit trackers, and reflective prompts.</p>
+                            <!-- Multiple Styles Selector -->
+                            <div class="mb-6">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Available Styles:</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-medium">🌿 Sage Green</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-rose-50 text-rose-700 border border-rose-200 text-xs font-medium">✨ Rose Gold</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-medium">🌙 Midnight Navy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button onclick="showComingSoon()" class="flex-1 py-3 px-4 rounded-xl bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 shadow-md shadow-brand-600/20 transition-all flex items-center justify-center space-x-2">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                                <span>Buy Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Daily Diary -->
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="relative h-56 bg-gradient-to-br from-amber-600 to-orange-500 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <i data-lucide="book" class="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-slate-900">Notebook</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="text-xl font-bold text-slate-900">Daily Diary Notebook</h4>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-4">Lined daily diary templates optimized for GoodNotes, Notability, and home printing.</p>
+                            <!-- Multiple Styles Selector -->
+                            <div class="mb-6">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Available Styles:</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-800 border border-amber-200 text-xs font-medium">📜 Minimalist Linen</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-stone-100 text-stone-800 border border-stone-300 text-xs font-medium">🤎 Leatherette Brown</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-pink-50 text-pink-700 border border-pink-200 text-xs font-medium">🌅 Pastel Sunset</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button onclick="showComingSoon()" class="flex-1 py-3 px-4 rounded-xl bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 shadow-md shadow-brand-600/20 transition-all flex items-center justify-center space-x-2">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                                <span>Buy Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Blank Recipe Writing Card -->
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="relative h-56 bg-gradient-to-br from-emerald-600 to-teal-500 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <i data-lucide="file-text" class="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-slate-900">Printable Card</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="text-xl font-bold text-slate-900">Blank Recipe Writing Card Set</h4>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-4">Printable index cards with ingredients, directions, and notes sections for your family recipes.</p>
+                            <!-- Multiple Styles Selector -->
+                            <div class="mb-6">
+                                <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Available Styles:</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-lg bg-teal-50 text-teal-800 border border-teal-200 text-xs font-medium">🌸 Vintage Floral</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 border border-blue-200 text-xs font-medium">✨ Modern Clean</span>
+                                    <span class="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-900 border border-amber-200 text-xs font-medium">🌾 Rustic Kraft</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button onclick="showComingSoon()" class="flex-1 py-3 px-4 rounded-xl bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 shadow-md shadow-brand-600/20 transition-all flex items-center justify-center space-x-2">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                                <span>Buy Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-3">More Digital Goods</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Posters, Greeting Cards & E-Cards</h3>
+                <p class="mt-4 text-lg text-slate-600">Instantly downloadable wall art and festive holiday greeting card bundles.</p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="relative h-56 bg-gradient-to-br from-rose-600 to-red-500 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <i data-lucide="gift" class="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-slate-900">Christmas & Greeting Cards</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="text-xl font-bold text-slate-900">Holiday Magic Christmas Card Bundle</h4>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-6">Over 30 unique printable and e-card holiday greeting templates. Customize easily in Canva or print directly at home.</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button onclick="showComingSoon()" class="flex-1 py-3 px-4 rounded-xl bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 shadow-md shadow-brand-600/20 transition-all flex items-center justify-center space-x-2">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                                <span>Buy Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="relative h-56 bg-gradient-to-br from-emerald-600 to-teal-500 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <i data-lucide="image" class="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-slate-900">Posters & Wall Art</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="text-xl font-bold text-slate-900">Minimalist Botanical Wall Art Set</h4>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-6">A curated collection of 6 high-resolution printable posters in various aspect ratios, perfect for modern home decor and gifting.</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button onclick="showComingSoon()" class="flex-1 py-3 px-4 rounded-xl bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 shadow-md shadow-brand-600/20 transition-all flex items-center justify-center space-x-2">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                                <span>Buy Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="relative h-56 bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <i data-lucide="mail" class="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-slate-900">Digital E-Cards</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="text-xl font-bold text-slate-900">Festive Animated E-Cards Suite</h4>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-6">Delight friends and family with animated digital e-cards designed for birthdays, holidays, and special milestones.</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button onclick="showComingSoon()" class="flex-1 py-3 px-4 rounded-xl bg-brand-600 text-white font-semibold text-sm hover:bg-brand-700 shadow-md shadow-brand-600/20 transition-all flex items-center justify-center space-x-2">
+                                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                                <span>Buy Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 text-white pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-cursive text-xl">
+                            S
+                        </div>
+                        <span class="text-lg font-bold tracking-tight">Shaaz Digital</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">Delivering gorgeous printables, journals, greeting cards, and e-cards for every celebration.</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-4">Categories</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#products" class="hover:text-white transition-colors">Journals & E-books</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Christmas & Greeting Cards</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Posters & Wall Art</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Digital E-cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><button onclick="toggleAboutModal()" class="hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left text-sm text-slate-400">About Us</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 Shaaz Digital. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-400 transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-slate-400 transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="#" class="hover:text-slate-400 transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cart-drawer" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden transition-opacity">
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                <div class="flex items-center justify-between px-6 py-5 border-b border-slate-200">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center space-x-2">
+                        <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-600"></i>
+                        <span>Your Shopping Cart</span>
+                    </h3>
+                    <button onclick="toggleCart()" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+                    <p id="empty-cart-msg" class="text-slate-500 text-center py-12">Your cart is currently empty.</p>
+                </div>
+                <div class="p-6 border-t border-slate-200 bg-slate-50">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-sm font-semibold text-slate-600">Subtotal</span>
+                        <span id="cart-total" class="text-xl font-extrabold text-slate-900">$0.00</span>
+                    </div>
+                    <button onclick="checkoutCart()" class="w-full py-4 rounded-xl bg-brand-600 text-white font-semibold text-base shadow-lg shadow-brand-600/25 hover:bg-brand-700 transition-all flex items-center justify-center space-x-2">
+                        <span>Proceed to Secure Checkout</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Modal Window -->
+    <div id="coming-soon-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-8 shadow-2xl text-center transform transition-all">
+            <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 mx-auto flex items-center justify-center mb-5 border border-brand-100">
+                <i data-lucide="sparkles" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">Coming Soon!</h3>
+            <p class="text-slate-600 text-sm mb-6 leading-relaxed">We are putting the final touches on our store. This digital product will be available for purchase very soon!</p>
+            <button onclick="toggleComingSoonModal()" class="w-full py-3.5 rounded-xl bg-brand-600 text-white font-semibold text-sm shadow-lg shadow-brand-600/25 hover:bg-brand-700 transition-all">Got it</button>
+        </div>
+    </div>
+
+    <!-- About Us Modal Window (Customizable Text) -->
+    <div id="about-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative transform transition-all">
+            <button onclick="toggleAboutModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 p-1">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 mx-auto flex items-center justify-center mb-5 border border-brand-100">
+                <i data-lucide="info" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-slate-900 mb-3 text-center">About Shaaz Digital</h3>
+            <div class="text-slate-600 text-sm mb-6 leading-relaxed space-y-3">
+                <p>Welcome to <strong>Shaaz Digital</strong>! We specialize in crafting exquisite, instantly downloadable digital treasures designed to inspire, organize, and elevate your everyday life.</p>
+                <p>From botanical mindfulness journals and daily diaries to minimalist wall art posters, festive greeting cards, and animated e-cards, every asset is thoughtfully created with beauty and functionality in mind.</p>
+                <p>Our mission is to provide creators, planners, and gift-givers with premium digital assets that bring joy and effortless elegance to every celebration.</p>
+            </div>
+            <button onclick="toggleAboutModal()" class="w-full py-3.5 rounded-xl bg-brand-600 text-white font-semibold text-sm shadow-lg shadow-brand-600/25 hover:bg-brand-700 transition-all">Close</button>
+        </div>
+    </div>
+
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 flex items-center space-x-3">
+        <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+        <span id="toast-message" class="text-sm font-medium">Notification message</span>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Cart State
+        let cart = [];
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+            renderCart();
+        }
+
+        function showComingSoon() {
+            const modal = document.getElementById('coming-soon-modal');
+            modal.classList.remove('hidden');
+        }
+
+        function toggleComingSoonModal() {
+            const modal = document.getElementById('coming-soon-modal');
+            modal.classList.add('hidden');
+        }
+
+        function toggleAboutModal() {
+            const modal = document.getElementById('about-modal');
+            modal.classList.toggle('hidden');
+            lucide.createIcons();
+        }
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartBadge();
+            showToast(`Added "${name}" to your cart!`);
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCartBadge();
+            renderCart();
+            showToast(`Removed item from cart.`);
+        }
+
+        function updateCartBadge() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-badge').innerText = totalItems;
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cart-items');
+            const totalEl = document.getElementById('cart-total');
+            
+            if (cart.length === 0) {
+                container.innerHTML = `<p id="empty-cart-msg" class="text-slate-500 text-center py-12">Your cart is currently empty.</p>`;
+                totalEl.innerText = '$0.00';
+                return;
+            }
+
+            let html = '';
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                subtotal += item.price * item.quantity;
+                html += `
+                    <div class="flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200">
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">${item.name}</h4>
+                            <p class="text-xs text-slate-500">$${item.price} × ${item.quantity}</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-sm font-extrabold text-slate-900">$${item.price * item.quantity}</span>
+                            <button onclick="removeFromCart('${item.name}')" class="text-rose-500 hover:text-rose-700 p-1">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+            totalEl.innerText = `$${subtotal.toFixed(2)}`;
+            lucide.createIcons();
+        }
+
+        function checkoutCart() {
+            if (cart.length === 0) {
+                showToast("Your cart is empty!");
+                return;
+            }
+            showToast("Redirecting to secure checkout...");
+            setTimeout(() => {
+                toggleCart();
+                cart = [];
+                updateCartBadge();
+                showToast("Order placed successfully! Check your email for instant downloads.");
+            }, 2000);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toast-message');
+            msgEl.innerText = message;
+            
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
